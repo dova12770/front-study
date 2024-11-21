@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 필요시 작성 */
+        .back_container {
+            background-color: gray;
+        }
+
+        .back_container1 {
+            background-color: white;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeMain1()">main 배경색 white로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP1_1()">p1 글자색 black으로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+    <script>
+        /* 코드 작성 부분 */
+        function changeMain() {
+            document.getElementsByClassName('container')[0].classList.add('back_container');
+            console.log('gray');
+        }
+        function changeMain1() {
+            document.getElementsByClassName('container')[0].classList.add('back_container1');
+            console.log('white');
+        }
+        function changeP1() {
+
+            document.getElementById('p1').classList.add('red');
+            console.log('red');
+        }
+        function changeP1_1() {
+
+            document.getElementById('p1').classList.remove('red');
+            console.log('red_remove');
+        }
+        function changeP2() {
+            document.getElementById('p2');
+            const p2e = document.getElementById('p2');
+            console.log(changeP2);
+            p2e.innerHTML = "";
+            p2e.innerHTML = "p2 글자";
+        }
+    </script>
+</body>
+
+</html>
